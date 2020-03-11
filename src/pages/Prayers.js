@@ -8,7 +8,7 @@ import { Global, css, jsx } from "@emotion/core";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function Browse() {
+function Prayers() {
   const [test, setTest] = useState("dsfsd");
 
   const fetchData = () => {
@@ -28,7 +28,6 @@ function Browse() {
 
   return (
   <div>
-      <Navbar/>
       Here it is: {test}
       <Footer/>
   </div>
@@ -38,4 +37,4 @@ function Browse() {
 
 
 
-export default Browse;
+export default Prayers;

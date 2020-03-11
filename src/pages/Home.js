@@ -46,7 +46,7 @@ const useStyles = makeStyles({
         background: 'linear-gradient(to bottom, #ff99bb 0%, #ff7777 100%)'
     },
     homeEndDiv: {
-        height: '100vh',
+        height: '65vh',
         background: 'linear-gradient(to bottom, #ff7777 0%, #ff4444 100%)'
     },
     homeLogoEnd: {
@@ -71,6 +71,7 @@ const Home = () => {
 
 	return (
         <div className={classes.homeContainerDiv}>
+            <HomeNav />
             <div className={classes.homeIntroDiv}>
                 <div className={classes.title}>Cloud and Fire</div>
                 <div className={classes.subTitle}>A prayer application</div>
@@ -81,7 +82,6 @@ const Home = () => {
                         <br/>Exodus 13:21 (ESV)
                     </div>
                 </div>
-                <HomeNav location={"top"}/>
             </div>
             <div className={classes.homeScrollDiv0}>
                 
@@ -103,9 +103,8 @@ const Home = () => {
                         <br/>Exodus 13:21 (ESV)
                     </div>
                 </div>
-                <HomeNav location={"bottom"}/>
             </div>
-            <Footer />
+         
         </div>
 	)
 }
