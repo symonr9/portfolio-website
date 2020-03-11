@@ -12,8 +12,8 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginLeft: '10em',
-        marginRight: '10em',
+        marginLeft: '13em',
+        marginRight: '13em',
         '& a': {
             background: 'linear-gradient(to right, #ffff99 0%, #ffffff 100%)',
             border: 0,

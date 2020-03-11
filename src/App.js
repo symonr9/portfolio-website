@@ -20,6 +20,7 @@ function App() {
         font-family: "Muli", sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        color: 'black';
     }
   `;
 

@@ -1,35 +1,34 @@
-/** @jsx jsx */
+import React, { useState } from "react";
+import { makeStyles } from '@material-ui/core/styles';
 
-import { css, jsx } from "@emotion/core";
 
-function Footer() {
-    const footerStyles = css`
-        width: 100%;
-        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-
-        .content {
-            padding: 15px;
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            a {
-                color: black;
+const useStyles = makeStyles({
+	footerDiv: {
+        boxShadow: '0 -1px 1px rgba(0,0,0,0.2)',
+        padding: '1em',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        '& a': {
+            textDecoration: 'none',
+            color: 'black',
+            '& :hover': {
+                color: 'gold'
             }
         }
-    `;
+    }
+});
+
+
+function Footer() {
+    const classes = useStyles();
 
     return (
-        <div css={footerStyles}>
-            <div className="content">
-                <div>
-                    <a href="https://github.com/Merfoo/notes">Created</a> with love by <a href="https://github.com/Merfoo">Fauzi</a> and <a href="https://github.com/symonr9">Symon</a>
-                </div>
-            </div>
+        <div className={classes.footerDiv}>
+            <a href="https://github.com/symonr9/portfolio-website" target="_blank">Created by Symon Ramos :)</a>
         </div>
     );
+
 }
 
 export default Footer;
