@@ -96,7 +96,7 @@ const Home = () => {
 
 	return (
         <div className={classes.homeContainerDiv}>
-            <HomeNav />
+            
             <div className={classes.homeIntroDiv}>
                 <div className={classes.title}>Cloud and Fire</div>
                 <div className={classes.subTitle}></div>

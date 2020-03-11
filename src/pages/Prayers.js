@@ -8,7 +8,10 @@ import { Global, css, jsx } from "@emotion/core";
 import HomeNav from "../components/HomeNav";
 import Footer from "../components/Footer";
 
+import useCommonStyles from '../styles/common';
+
 function Prayers() {
+  const common = useCommonStyles();
   const [test, setTest] = useState("dsfsd");
 
   const fetchData = () => {
@@ -28,9 +31,15 @@ function Prayers() {
 
   return (
   <div>
-    <HomeNav />
-      Here it is: {test}
-      <Footer/>
+    <div className={common.pageContainerDiv}>
+        <div className={common.pageDiv}>
+            <div className={common.desertPageBodyDiv}>
+                <br/>
+                {test}
+            </div>
+        </div>
+        
+    </div>
   </div>
   );
 

@@ -12,7 +12,7 @@ import useCommonStyles from '../styles/common'
 const useStyles = makeStyles({
 });
 
-function MyPillars() {
+function Profile() {
   const classes = useStyles();
   const common = useCommonStyles();
 
@@ -24,7 +24,7 @@ function MyPillars() {
         <div className={common.pageDiv}>
             <div className={common.desertPageBodyDiv}>
                 <br/>
-                Your Faith Journey
+                Profile
             </div>
         </div>
         
@@ -36,4 +36,4 @@ function MyPillars() {
 
 
 
-export default MyPillars;
+export default Profile;

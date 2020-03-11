@@ -67,8 +67,8 @@ function HomeNav() {
             <NavLink to="/prayers">Prayers</NavLink>
             <NavLink to="/pillars">My Pillars</NavLink>
             <NavLink to="/pillars/create">Create</NavLink>
-            <NavLink to="/">Blog</NavLink>
-            <NavLink to="/">About Me</NavLink>
+            <NavLink to="/profile">Profile</NavLink>
+            <NavLink to="/">Home</NavLink>
         </div>
     );
 }
