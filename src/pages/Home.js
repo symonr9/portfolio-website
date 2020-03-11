@@ -1,29 +1,45 @@
 import React, { useState } from 'react'
-import { getData } from 'services/apiCalls'
-import { backendRoutes } from 'siteData/routes'
-import List from 'atomicDesign/organisms/List/List'
-import BottomNavigation from '@material-ui/core/BottomNavigation'
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
-import RestoreIcon from '@material-ui/icons/Restore'
-import FavoriteIcon from '@material-ui/icons/Favorite'
 
-import FolderIcon from '@material-ui/icons/Folder'
+import CloudQueue from '@material-ui/icons/CloudQueue'
 import { makeStyles } from '@material-ui/core/styles'
-import SectionTitle from 'atomicDesign/atoms/SectionTitle/SectionTitle'
+
+import HomeNav from '../components/HomeNav'
 
 const useStyles = makeStyles({
-	root: {
-		width: '100%',
-		backgroundColor: 'rgb(230, 238, 244)'
-	}
+    homeContainerDiv: {
+        width: '100vw',
+        height: '80vh',
+        color: 'black',
+        background: 'linear-gradient(to bottom, #ffffff 0%, #99ccff 110%)'
+    },
+    homeLogo: {
+        marginTop: '20vh',
+        marginLeft: '10em',
+        marginRight: '10em',
+        textAlign: 'center'
+    },
+    homeIcon: {
+        fontSize: '7em'
+    },
+    homeVerse: {
+        marginTop: '2em',
+        fontSize: '12px'
+    }
 });
+
 
 const Home = () => {
 	const classes = useStyles();
 
 	return (
-		<div className="">
-			Hello
+		<div className={classes.homeContainerDiv}>
+            <div className={classes.homeLogo}>
+                <CloudQueue className={classes.homeIcon} />
+                <div className={classes.homeVerse}>
+                    And the LORD went before them by day in a pillar of cloud to lead them along the way... Exodus 13:21 (ESV)
+                </div>
+            </div>
+            <HomeNav />
 		</div>
 	)
 }
