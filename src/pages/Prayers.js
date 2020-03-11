@@ -5,7 +5,7 @@ import { Global, css, jsx } from "@emotion/core";
 
 //import { loadState } from "./localStorage";
 
-import Navbar from "../components/Navbar";
+import HomeNav from "../components/HomeNav";
 import Footer from "../components/Footer";
 
 function Prayers() {
@@ -28,6 +28,7 @@ function Prayers() {
 
   return (
   <div>
+    <HomeNav />
       Here it is: {test}
       <Footer/>
   </div>

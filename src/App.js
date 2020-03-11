@@ -9,15 +9,17 @@ import store from "./services/redux/store";
 //import { loadState } from "./localStorage";
 
 import Prayers from "./pages/Prayers";
+import MyPillars from "./pages/MyPillars";
+import CreatePillars from "./pages/CreatePillars";
 import Home from "./pages/Home";
 
 function App() {
   const globalStyles = css`
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro:700&display=swap');
 
     body {
         margin: 0;
-        font-family: "Roboto", sans-serif;
+        font-family: "Muli", sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: 'black';
@@ -30,6 +32,8 @@ function App() {
     <Provider store={store}>
       <Switch>
           <Route path="/prayers" component={Prayers} />
+          <Route path="/pillars/create" component={CreatePillars} />
+          <Route path="/pillars/" component={MyPillars} />
           <Route path="/" component={Home} />
       </Switch>
     </Provider>

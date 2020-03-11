@@ -7,41 +7,10 @@ import Hamburger from "./Hamburger";
 import CloudQueue from '@material-ui/icons/CloudQueue'
 import Whatshot from '@material-ui/icons/Whatshot'
 
-
-/*
-const useStyles = makeStyles({
-	homeNav: {
-        marginTop: '10vh',
-        textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginLeft: '13em',
-        marginRight: '13em',
-        '& a': {
-            background: 'linear-gradient(to right, #ffff99 0%, #ffffff 100%)',
-            border: 0,
-            borderRadius: 3,
-            boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-            color: 'black',
-            padding: '1em 2em',
-            textDecoration: 'none',
-            '&:hover': {
-                transition: '.4s ease-in-out',
-                WebkitTransition: 'height .4s ease-in-out',
-                MozTransition: 'height .4s ease-in-out',
-                background: 'linear-gradient(to right, #ffff99 40%, #ffffff 100%)',
-                color: 'black'
-            }
-          }
-    }
-});
-*/
-
 const useStyles = makeStyles({
 	homeNav: {
         height: '100%',
-        width: '160px',
+        width: '10em',
         position: 'fixed',
         zIndex: '1',
         top: '0',
@@ -52,21 +21,21 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
         '& a': {
-            background: 'linear-gradient(to right, #ffff99 0%, #ffffff 100%)',
+            background: 'linear-gradient(to right, #ffff88 0%, #ffffff 100%)',
             border: 0,
             borderRadius: 3,
             boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
             color: 'black',
             padding: '1em 2em',
             textDecoration: 'none',
-            marginTop: '2em',
+            marginTop: '1em',
             marginLeft: '0.5em',
             marginRight: '0.5em',
             '&:hover': {
                 transition: '.4s ease-in-out',
                 WebkitTransition: 'height .4s ease-in-out',
                 MozTransition: 'height .4s ease-in-out',
-                background: 'linear-gradient(to right, #ffff99 40%, #ffffff 100%)',
+                background: 'linear-gradient(to right, #ffff88 40%, #ffffff 100%)',
                 color: 'black'
             }
           }
@@ -96,8 +65,8 @@ function HomeNav() {
                 <Whatshot className={classes.fireLogoSize} />
             </div>
             <NavLink to="/prayers">Prayers</NavLink>
-            <NavLink to="/">Letters</NavLink>
-            <NavLink to="/">Poetry</NavLink>
+            <NavLink to="/pillars">My Pillars</NavLink>
+            <NavLink to="/pillars/create">Create</NavLink>
             <NavLink to="/">Blog</NavLink>
             <NavLink to="/">About Me</NavLink>
         </div>
