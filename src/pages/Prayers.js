@@ -12,14 +12,13 @@ import useCommonStyles from '../styles/common';
 
 function Prayers() {
   const common = useCommonStyles();
-  const [test, setTest] = useState("dsfsd");
+  const [test, setTest] = useState(null);
 
   const fetchData = () => {
-    fetch("http://localhost:9000/test")
-      .then(res => res.text())
+    fetch("http://localhost:9000/pillars")
         .then(
           res => {
-            setTest(res);
+         //   setTest(res);
             console.log("res is: ", res);
           }
           );
