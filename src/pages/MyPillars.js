@@ -8,7 +8,17 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import useCommonStyles from "../styles/common";
 
-const useStyles = makeStyles({});
+import Pillar from "../components/Pillar";
+
+const useStyles = makeStyles({
+  pillarsContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    height: '9em',
+    overflowX: 'scroll'
+  }
+});
 
 async function getData() 
 {
@@ -21,33 +31,34 @@ async function getData()
 }
 
 function MyPillars() {
+  const classes = useStyles();
+  const common = useCommonStyles();
+
   const [pillars, setPillars] = useState(null);
 
-  //setPillars(getData());
-
-
-  /*
+  
   const fetchData = async () => {
     fetch("http://localhost:9000/pillars")
-      .then(res => res.text())
-        .then(
-          res => {
-            setPillars(res);
-            console.log("res is: ", res);
-          }
-          );
-  }*/
+      //.then(res => res.text())
+      .then(res => res.json())
+      .then(
+        res => {
+          setPillars(res);
+          console.log("res is: ", res);
+          console.log("type of pillars: ", typeof(pillars))
+        }
+        );
+  }
 
-  /*
-  useEffect(fetchData());
+  useEffect(() => {
+    fetchData();
+    // do anything only one time if you pass empty array []
+    // keep in mind, that component will be rendered one time (with default values) before we get here
+  }, [] )
+
   if (!pillars){
       return null;
   }
-  */
-  console.log("this is test: ", pillars);
-
-  const classes = useStyles();
-  const common = useCommonStyles();
 
   return (
       <div className={common.pageContainerDiv}>
@@ -55,12 +66,10 @@ function MyPillars() {
           <div className={common.desertPageBodyDiv}>
             <br />
             Your Faith Journey
-            {
-            
-            pillars.map(({ name, age, cars}) => {
-                return (<div>{name}</div>);
-            })
-            }
+            <br/>
+            <div className={classes.pillarsContainer}>
+              { pillars.map(pillar => <Pillar key={pillar.id} {...pillar} />) }
+            </div>
           </div>
         </div>
       </div>
